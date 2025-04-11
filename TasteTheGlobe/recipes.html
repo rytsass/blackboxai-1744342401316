@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste the Globe - World Cuisines</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link rel="icon" type="image/png" href="images/globe.png">
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'imperial': ['"Imperial Script"', 'cursive'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#455A3C',
+                        secondary: '#C4BB6C',
+                        accent: '#EFE48B',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body class="font-poppins">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-primary"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-gradient-to-r from-primary/80 via-secondary/80 to-accent/80 backdrop-blur-lg z-40">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="font-imperial text-4xl text-primary">Taste the Globe</h1>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:text-accent transition-colors">Home</a>
+                    <div class="relative group">
+                        <a href="#" class="text-white hover:text-accent transition-colors">Recipes</a>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2">
+                            <a href="allrecipes.html" class="block px-4 py-2 text-primary hover:bg-accent/20">All Recipes</a>
+                            <a href="recipes.html" class="block px-4 py-2 text-primary hover:bg-accent/20">World Cuisines</a>
+                            <a href="#" class="block px-4 py-2 text-primary hover:bg-accent/20">Recipe Tips</a>
+                        </div>
+                    </div>
+                    <a href="#faq" class="text-white hover:text-accent transition-colors">FAQ</a>
+                    <a href="#about" class="text-white hover:text-accent transition-colors">About Us</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <form id="search-form" class="relative">
+                        <input type="text" placeholder="Search recipes..." 
+                               class="w-64 px-4 py-2 rounded-full border border-primary/20 focus:outline-none focus:border-primary"
+                               id="search-input"
+                               autocomplete="off">
+                        <button type="button" 
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-primary hover:text-secondary transition-colors"
+                                id="search-button"
+                                onclick="performSearch()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/80 transition-colors"
+                            id="sign-up-button">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24">
+        <!-- World Cuisines Section -->
+        <section class="py-16 bg-gradient-to-b from-accent/20 to-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-primary text-center mb-12">World Cuisines</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Recipe Cards -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
+                        <div class="relative overflow-hidden">
+                            <img src="recipe-selection/continent-selection-images/africa.png" alt="African Cuisine" 
+                                 class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                                <div class="p-6">
+                                    <h3 class="text-2xl font-bold text-white">African CuisineSince the replace operation failed, I'll read the current content of the recipes.html file again and then update it accordingly.
+
+<read_file>
+<path>TasteTheGlobe/recipes.html</path>
+</read_file>
