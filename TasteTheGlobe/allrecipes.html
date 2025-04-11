@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste the Globe - All Recipes</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link rel="icon" type="image/png" href="images/globe.png">
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'imperial': ['"Imperial Script"', 'cursive'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#455A3C',
+                        secondary: '#C4BB6C',
+                        accent: '#EFE48B',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body class="font-poppins">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-primary"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-gradient-to-r from-primary/80 via-secondary/80 to-accent/80 backdrop-blur-lg z-40">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="font-imperial text-4xl text-primary">Taste the Globe</h1>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:text-accent transition-colors">Home</a>
+                    <div class="relative group">
+                        <a href="#" class="text-white hover:text-accent transition-colors">Recipes</a>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-md mt-2">
+                            <a href="allrecipes.html" class="block px-4 py-2 text-primary hover:bg-accent/20">All Recipes</a>
+                            <a href="recipes.html" class="block px-4 py-2 text-primary hover:bg-accent/20">World Cuisines</a>
+                            <a href="#" class="block px-4 py-2 text-primary hover:bg-accent/20">Recipe Tips</a>
+                        </div>
+                    </div>
+                    <a href="#faq" class="text-white hover:text-accent transition-colors">FAQ</a>
+                    <a href="#about" class="text-white hover:text-accent transition-colors">About Us</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <form id="search-form" class="relative">
+                        <input type="text" placeholder="Search recipes..." 
+                               class="w-64 px-4 py-2 rounded-full border border-primary/20 focus:outline-none focus:border-primary"
+                               id="search-input"
+                               autocomplete="off">
+                        <button type="button" 
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-primary hover:text-secondary transition-colors"
+                                id="search-button"
+                                onclick="performSearch()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/80 transition-colors"
+                            id="sign-up-button">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24">
+        <!-- All Recipes Section -->
+        <section class="py-16 bg-gradient-to-b from-accent/20 to-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-primary text-center mb-12">All Recipes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="all-recipes">
+                    <!-- Recipe cards will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="py-16 bg-gradient-to-b from-white to-accent/20">
+            <div class="container mx-auto px-4 max-w-2xl text-center">
+                <h2 class="text-3xl font-bold text-primary mb-6">Stay Updated</h2>
+                <p class="text-gray-600 mb-8">Subscribe to our newsletter for new recipes, cooking tips, and exclusive content.</p>
+                <form class="flex gap-4">
+                    <input type="email" placeholder="Enter your email" 
+                           class="flex-grow px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-primary">
+                    <button type="submit" class="bg-primary text-white px-4 py-2 rounded-lg">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p>Email: contact@tastetheglobe.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent">Home</a></li>
+                        <li><a href="#" class="hover:text-accent">Recipes</a></li>
+                        <li><a href="#" class="hover:text-accent">About Us</a></li>
+                        <li><a href="#" class="hover:text-accent">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-accent"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-accent"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-accent"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-accent"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-white/20">
+                <p>&copy; 2025 Taste the Globe. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Load all recipes on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('recipes.json')
+                .then(response => response.json())
+                .then(recipes => {
+                    const recipesContainer = document.getElementById('all-recipes');
+                    recipes.forEach(recipe => {
+                        const imageUrl = Array.isArray(recipe.imageUrl) ? recipe.imageUrl[0] : recipe.imageUrl;
+                        const categoryTags = recipe.categoryTags || [];
+                        
+                        const recipeCard = document.createElement('div');
+                        recipeCard.className = 'bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-shadow duration-300';
+                        recipeCard.innerHTML = `
+                            <div class="relative overflow-hidden">
+                                <img src="${imageUrl}" alt="${recipe.name}" 
+                                     class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-bold text-white">${recipe.name}</h3>
+                                        <p class="text-white/80 mt-2 line-clamp-2">${recipe.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between text-sm text-gray-500 mb-4">
+                                    <span><i class="far fa-clock mr-1"></i> ${recipe.prepTime}</span>
+                                    <span><i class="fas fa-users mr-1"></i> ${recipe.servings} servings</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    ${categoryTags.map(tag => `
+                                        <span class="bg-accent/20 text-primary px-2 py-1 rounded-full text-sm">
+                                            ${tag}
+                                        </span>
+                                    `).join('')}
+                                </div>
+                                <a href="recipe${recipes.indexOf(recipe) + 1}.html" 
+                                   class="block w-full bg-primary text-white text-center py-2 rounded-lg hover:bg-primary/80 transition-colors">
+                                    View Full Recipe
+                                </a>
+                            </div>
+                        `;
+                        recipesContainer.appendChild(recipeCard);
+                    });
+                })
+                .catch(error => console.error('Error loading recipes:', error));
+        });
+    </script>
+</body>
+</html>
