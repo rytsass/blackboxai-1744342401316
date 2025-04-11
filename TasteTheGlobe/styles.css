@@ -1,0 +1,678 @@
+/* General styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0px;
+  color: #fff;
+  background-blend-mode: lighten;
+  background: white;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #455a3c00, #86916100, #C4BB6C, #EFE48B, #c4bb6c00, #86916100, #455a3c00);
+  padding: 20px 20px;
+  border-bottom: 20px solid #d6dbc563;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(100px); /* Apply blur effect when scrolling */
+}
+
+.logo {
+  font-size: 30px;
+  font-family: 'Imperial Script', cursive;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  top: 3px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  
+  color: #455A3C; 
+}
+
+body {
+  padding-top: 97px;
+}
+
+
+nav {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+  
+nav a:hover {
+  color: #d9ff00;
+  transform: scale(1.1);
+}
+.actions {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.sign-up, .search {
+  background: linear-gradient(to bottom, #4c722e, #08dd32,);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 50px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.sign-up:hover, .search:hover {
+  background: linear-gradient(to bottom, #008805,  #6fe44f);
+  color: #ffffff;
+}
+
+.sign-up {
+  background: linear-gradient(to bottom, #7fbe6a, #92ae14);
+  color: #ffffff;
+  font-size: 16px;
+  margin-right: 29px;
+}
+
+.fa-user {
+  font-size: 2.5em; /* Adjust the size as needed */
+  color: #005a0c;      /* Set the color */
+  margin-right: 20px; /* Add some spacing */
+}
+
+.search {
+  background: linear-gradient(to bottom, #e3e9dd, #ffffff);
+  color: #455A3C;
+  font-size: 16px;
+}
+
+.dropdown  {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.dropdown:hover {
+  color: #d9ff00;
+  transform: scale(1.1);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: rgb(42, 108, 34);
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #c6d07c;
+  color: rgb(8, 124, 0);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero Section */
+.hero0 {
+  display: flex;
+  background-color: #1d40166f;
+  padding: 10px 20px;
+  top: 100;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+  text-decoration: none;
+  transition: border-bottom 0.3s;
+  backdrop-filter: blur(100px);
+}
+
+.hero0:hover:hover {
+  background-color: #425d3bae;
+}
+
+.hero {
+  background: linear-gradient(to bottom, rgba(213, 221, 91, 0.36), rgba(20, 20, 20, 0.9)), 
+              url('images/food.jpg') center/cover no-repeat;
+  text-align: center;
+  padding: 140px 20px;
+  border-bottom: 30px solid #c9deb07e;
+  position: relative;
+  transition: background 0.3s ease-in-out;
+}
+ 
+.hero h1 {
+  font-size: 150px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  line-height: 120px;
+  background: linear-gradient(to left, #ffffff, #54c205);
+  background-clip: text;
+  -webkit-background-clip: solid;
+  text-shadow: 0 0 20px rgb(0, 0, 0);
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.hero h1:hover {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(102, 152, 27, 0.8);
+}
+
+.discover-btn {
+  background: linear-gradient(to bottom, #0b5e20, #01be5c);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.discover-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to bottom, #066b1f, #01a54b);
+}
+
+/* Sections */
+.section {
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+  font-weight: 500px;
+  text-align: center;
+  height: max-content;
+  color: rgb(255, 255, 255);
+  background-color: #dbe98dae;
+  transition: background 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.section h2 {
+  padding: 50px 30px;
+  margin: 0;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(0, 72, 16);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Product Cards */
+.cards {
+    display: flex;
+    overflow-x: hidden;
+    padding: 20px 0 20px 20px; /* Combine padding */
+    width: 100%;
+    align-self: center;
+    gap: 20px;
+    scrollbar-width: 100%;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    font-size: smaller;
+}
+
+.cards h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #455A3C;
+  text-align: center; 
+}
+
+/* Hide the scrollbar in Chrome, Safari and Opera */
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styles for individual cards */
+.card {
+  flex: 0 0 auto; /* Do not grow, do not shrink, base size is auto */
+  width: 300px; /* Adjust card width as needed */
+  height: 200px; /* Adjust card height as needed */
+  border: 3px solid #b7c728;
+  border-radius: 8px;
+  margin-bottom: 70px;
+  padding: 15px;
+  text-align: center;
+  scroll-snap-align: start; /* Optional: align cards to the start of the container */
+  background-color: #ffffff;
+  box-shadow: 0 12px 16px rgb(99, 96, 64);
+  animation: autoRun 6s linear infinite; /* Adjust duration as needed */
+  animation-duration: 3s; /* Adjust duration as needed */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(to top, #fffffd, #C4BB6C);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  font-size: 27px;
+  height: 14cm;
+  color: #2c601d;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  left: 100%;
+}
+
+/* Keyframes for the scroll animation */
+@keyframes autoRun {
+  from {
+    transform: translateX(0);
+  }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+
+.card img {
+  width: 100%;
+  margin: 0;
+  border-radius: 10px 10px 0 0;
+  height: auto;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.card h3 {
+  background: rgb(30, 78, 30);
+  display: absolute;
+  padding: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Corrected property */
+  font-size: 35px; /* Adjust font size */
+  text-align: center; /* Change text alignment */
+  width: 97%;
+  text-wrap: wrap;
+  padding: 0; /* Add some padding */
+  overflow: hidden;
+  margin-top: 10px;
+  max-height: .00000000000000000001cm;
+  word-break: break-word;
+}
+
+.card:hover h3 {
+  overflow: visible; /* Show overflowing content on hover */
+  max-height: none; /* Remove maximum height on hover */
+  text-align: center; /* Change text alignment */
+  
+}
+
+.card p {
+  background: linear-gradient(to right, #281b1b, #296026);
+  background-clip: text;
+  padding: 0;
+  margin: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Corrected property */
+  font-size: 20px; /* Adjust font size */
+  width: 97%;
+  text-wrap: wrap;
+  padding: 10px, 10px; /* Add some padding */
+  overflow: hidden;
+  max-height: 0.000001cm;
+  word-break: break-word;
+}
+
+.card:hover p {
+  overflow: visible; /* Show overflowing content on hover */
+  max-height: none; /* Remove maximum height on hover */
+}
+
+.section2 {
+  background: linear-gradient(to bottom, rgba(163, 167, 109, 0.789), rgb(12, 61, 20)), 
+              url('images/3rd.jpg') center/cover no-repeat;
+              color: linear-gradient(to top, #aeff00, #ffc800);
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  padding: 100px 20px;
+  position: relative;
+  transition: background 20s ease-in-out;
+  transition-duration: 20s;
+ 
+}
+
+.section2 p {
+  font-size: 36px;
+  font-weight: lighter;
+  margin-top: 100px;
+  line-height: 60px;
+  color: #ffffff;
+}
+
+.section3 {
+  background-color: #016810;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  position: relative;
+}
+
+#recipe-recommendation {
+  background: linear-gradient(to bottom, #215d2d, #034001); /* Add this line */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 50%;
+}
+
+#recipe-recommendation h2 {
+  color: #d8d7b6;
+}
+
+#recipe-recommendation p {
+  color: #efebca;
+  font-size: 16px;
+}
+
+
+
+#recipe-recommendation form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+#recipe-recommendation label {
+  font-weight: bold;
+  text-align: left;
+  margin-top: 10px;
+}
+
+#recipe-recommendation input {
+  width: 80%;
+  text-align: left;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#recipe-recommendation button {
+  background-color: #dbc92d;
+  color: rgb(11, 74, 2);
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#recipe-recommendation button:hover {
+  background-color: #ffee00;
+  transform: perspective(1px) scale(1.1);
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: 2px solid white;
+  backdrop-filter: blur(100px);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 50%;
+  margin-top: 180px;
+}
+
+.modal-content label {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modal-content-text {
+  color: #d8d7b6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-content h2 {
+  color: #d8d7b6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.modal-content .input-row {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: space-between; /* Space between the fields */
+  margin-bottom: 30px; /* Add some space below the row */
+  margin-left: 10px;
+  margin-right: 30px;
+}
+
+.modal-content input {
+  width: 80%;
+  text-align: left;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  align-self: center;
+}
+
+.modal-content button {
+  background-color: #dbc92d;
+  color: rgb(11, 74, 2);
+  font-weight: bold;
+  padding: 10px 20px;
+  width: 17%;
+  align-self: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.modal-content button:hover {
+  background-color: #ffee00;
+  transform: perspective(1px) scale(1.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.section3:hover {
+  background: linear-gradient(to bottom, #185d1c, #a9c86c);
+  color: rgb(255, 255, 255);
+}
+
+.section4 {
+  background-color: #d3dca2;  
+  margin-top: 20px;
+  text-align: center;
+  color: #455A3C;
+  padding: 10px 20px;
+  position: relative;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Footer */
+.footer {
+  background-color: #034001;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* From: https://github.com/clarin-eric/curation-dashboard/blob/54f554441d892e0f5377ff5f868e750950c8d43e/curation-web/src/main/resources/static/css/curation.css */
+.some-class {
+  .some-other-class {
+    z-index: 9999;
+    display: flex;
+  }
+  justify-content: center;
+  align-items: center;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.some-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+}
+
+/* Search Wrapper */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  outline: none;
+  padding: 8.8px 20px; /* Padding inside the button */
+  font-size: 16px; /* Font size */
+  border-radius: 5px 0px 0px 5px; /* Rounded corners on the right side */
+  border-color: #33cb66;
+}
+
+.search-input:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.search-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin-right: 50px;
+}
+
+.search-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 300px;
+}
+
+#search-button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#search-button:hover {
+    background-color: #3e8e41;
+}
+
+#results-container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Add more styles to match the Knorr website's design */
+
+/* From: https://github.com/hard456/organizingraces/blob/9f15236b74740a81022572af56e8bf8a8983cf90/src/main/webapp/Public/css/style.css */
